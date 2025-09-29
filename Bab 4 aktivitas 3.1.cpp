@@ -1,22 +1,20 @@
-#include<iostream>
-#include<fstream>
+#include <iostream>
+#include <fstream>
 using namespace std;
-int main(){
-	int data;
-	// buka file
-	ifstream file("data_kosong.txt");
-	if(file){
-		cout<<"File sukses dibuka!"<<endl;
-		// baca file dengan while
-		while(data < 10){
-		// tampilkan hasil pembacaan
-		cout<<data<< data++<<endl;
-		}
-		// tutup file
-		file.close();
-		return 0;
-	}else{
-		cout<<"File gagal dibuka!"<<endl;
-		return 1;
-	}
+
+int main() {
+    int data;
+    ifstream file("data_input.txt");
+    if (file) {
+        cout << "File sukses dibuka!" << endl;
+        while (file >> data) {
+            cout << data << endl;
+        }
+        file.close();
+        return 0;
+    } else {
+        cout << "File gagal dibuka!" << endl;
+        return 1;
+    }
 }
+

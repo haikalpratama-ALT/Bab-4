@@ -2,8 +2,6 @@
 #include <fstream>
 #include <iomanip>
 using namespace std;
-
-// Fungsi untuk menghitung Fibonacci ke-n
 int fibonacci(int n) {
     if (n == 1 || n == 2) {
         return 1;
@@ -41,4 +39,5 @@ int main() {
         return 1;
     }
 }
+
 
